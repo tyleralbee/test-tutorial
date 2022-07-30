@@ -1,6 +1,8 @@
 {
   "name": "test-tutorial",
-  "issue": "P0-24",
+  "config": {
+    "issue": "P0-24"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "git": "git add . && git commit -m '$npm_package_name $npm_config_msg' && git push"
+    "git": "git add . && git commit -m \"$npm_package_config_issue $npm_config_msg\" && git push",
+    "tester": "echo \"$npm_package_config_issue $npm_config_msg\""
   },
   "eslintConfig": {
     "extends": [
