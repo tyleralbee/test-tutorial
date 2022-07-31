@@ -23,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "git": "func() { npx eslint . --ext .js,.jsx,.ts,.tsx --fix && git add . && git commit -m \"$npm_package_config_issue $1\"; git push; }; func"
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "git": "func() { npm run lint && git add . && git commit -m \"$npm_package_config_issue $1\"; git push; }; func"
   },
   "eslintConfig": {
     "extends": [
