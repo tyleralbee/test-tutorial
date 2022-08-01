@@ -4,6 +4,6 @@ import Counter from './Counter';
 
 test('renders counter', () => {
   render(<Counter />);
-  const counter = screen.getByText(/Counter/i);
+  const counter = screen.getByText(/0/i);
   expect(counter).toBeInTheDocument();
 });
